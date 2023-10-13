@@ -2,6 +2,7 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Link } from "@phosphor-icons/react";
 import Badge from "./Badge";
 import { Project } from "../@types/project";
+import IconButton from "./IconButton";
 
 type Props = {
   project: Project;
@@ -20,20 +21,22 @@ function ProjectCard({ project }: Props) {
         <div className="flex items-center justify-between">
           <h4 className="text-2xl">{project.title}</h4>
           <div className="flex items-center gap-4">
-            <a
+            <IconButton
+              component="a"
               href={project.source || ""}
               target="_blank"
               rel="noreferrer noopener"
             >
               <SiGithub />
-            </a>
-            <a
+            </IconButton>
+            <IconButton
+              component="a"
               href={project.demo || ""}
               target="_blank"
               rel="noreferrer noopener"
             >
               <Link size={24} weight="bold" />
-            </a>
+            </IconButton>
           </div>
         </div>
         <p className="grow">{project.description}</p>
