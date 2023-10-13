@@ -28,8 +28,8 @@ const skills: Skill[] = [
 function Skills() {
   return (
     <div className="container mx-auto">
-      <section className="flex min-h-[20rem] flex-col justify-center gap-8 p-6 sm:px-0">
-        <h2 className="text-xl font-light">Tecnologias que uso:</h2>
+      <section className="flex min-h-[20rem] flex-col justify-center gap-8 px-6 py-12 sm:px-0 md:py-24">
+        <h2 className="text-lg font-light uppercase">Habilidades</h2>
         <ul className="grid grid-cols-4 items-center justify-between gap-6">
           {skills.map((skill) => (
             <li
