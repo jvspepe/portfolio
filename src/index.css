@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-inter leading-normal text-dark-primary;
+  @apply font-inter font-light leading-normal text-dark-primary;
 }
