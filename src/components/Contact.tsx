@@ -1,12 +1,52 @@
-import { EnvelopeSimple } from "@phosphor-icons/react";
+import {
+  EnvelopeSimple,
+  GithubLogo,
+  LinkedinLogo,
+  WhatsappLogo,
+} from "@phosphor-icons/react";
 import TextareaAutosize from "react-textarea-autosize";
 import Button from "./Button";
 import Input from "./Input";
+import IconButton from "./IconButton";
 
 function Contact() {
   return (
     <section className="container mx-auto flex flex-col gap-8 px-6 py-12 sm:px-0 md:py-24">
-      <h4 className="text-lg uppercase">Contato</h4>
+      <div className="flex items-center justify-between">
+        <h4 className="text-lg uppercase">Contato</h4>
+        <div className="flex items-center gap-2">
+          <IconButton
+            component="a"
+            href="https://www.linkedin.com/in/jvspepe/"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="LinkedIn"
+            aria-label="LinkedIn"
+          >
+            <LinkedinLogo size={32} weight="fill" />
+          </IconButton>
+          <IconButton
+            component="a"
+            href="https://github.com/jvspepe"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Github"
+            aria-label="Github"
+          >
+            <GithubLogo size={32} weight="fill" />
+          </IconButton>
+          <IconButton
+            component="a"
+            href="https://api.whatsapp.com/send?phone=5541992295501"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Whatsapp"
+            aria-label="Whatsapp"
+          >
+            <WhatsappLogo size={32} weight="fill" />
+          </IconButton>
+        </div>
+      </div>
       <form
         onSubmit={(event) => event.preventDefault()}
         className="flex grow flex-col gap-4"
