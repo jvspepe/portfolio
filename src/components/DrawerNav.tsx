@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { List, X } from "@phosphor-icons/react";
-import { Link } from "../@types/link";
+import { TLink } from "../@types/link";
 import Drawer from "./Drawer";
 import IconButton from "./IconButton";
 
 type Props = {
-  links: Link[];
+  links: TLink[];
 };
 
 function DrawerNav({ links }: Props) {

@@ -1,11 +1,11 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Link } from "@phosphor-icons/react";
+import { TProject } from "../@types/project";
 import Badge from "./Badge";
-import { Project } from "../@types/project";
 import IconButton from "./IconButton";
 
 type Props = {
-  project: Project;
+  project: TProject;
 };
 
 function ProjectCard({ project }: Props) {

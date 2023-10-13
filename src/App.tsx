@@ -1,11 +1,31 @@
-import { Project } from "./@types/project";
+import { TLink } from "./@types/link";
+import { TProject } from "./@types/project";
+import { TSkill } from "./@types/skill";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectDisplay from "./components/ProjectDisplay";
-import Skills from "./components/Skills";
+import SkillDisplay from "./components/SkillDisplay";
 
-const projects: Project[] = [
+const links: TLink[] = [
+  { label: "Sobre", path: "#sobre" },
+  { label: "Tecnologias", path: "#tecnologias" },
+  { label: "Projetos", path: "#projetos" },
+  { label: "Contato", path: "#contato" },
+];
+
+const skills: TSkill[] = [
+  { icon: "javascript", label: "JavaScript" },
+  { icon: "typescript", label: "TypeScript" },
+  { icon: "react", label: "ReactJS" },
+  { icon: "redux", label: "ReduxJS" },
+  { icon: "styled-components", label: "Styled-Components" },
+  { icon: "tailwindcss", label: "TailwindCSS" },
+  { icon: "material-ui", label: "Material UI" },
+  { icon: "firebase", label: "Firebase" },
+];
+
+const projects: TProject[] = [
   {
     thumbnail: "/images/projeto-1.jpg",
     title: "Avion Móveis",
@@ -41,9 +61,9 @@ const projects: Project[] = [
 function App() {
   return (
     <div>
-      <Header />
+      <Header links={links} />
       <Hero />
-      <Skills />
+      <SkillDisplay skills={skills} />
       <ProjectDisplay projects={projects} />
       <Contact />
     </div>

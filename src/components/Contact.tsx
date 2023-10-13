@@ -1,17 +1,20 @@
+import { EnvelopeSimple } from "@phosphor-icons/react";
 import {
-  EnvelopeSimple,
-  GithubLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from "@phosphor-icons/react";
+  SiGithub,
+  SiLinkedin,
+  SiWhatsapp,
+} from "@icons-pack/react-simple-icons";
 import TextareaAutosize from "react-textarea-autosize";
 import Button from "./Button";
-import Input from "./Input";
 import IconButton from "./IconButton";
+import Input from "./Input";
 
 function Contact() {
   return (
-    <section className="container mx-auto flex flex-col gap-8 px-6 py-12 sm:px-0 md:py-24">
+    <section
+      id="contato"
+      className="container mx-auto flex flex-col gap-8 px-6 py-12 sm:px-0 md:py-24"
+    >
       <div className="flex items-center justify-between">
         <h4 className="text-lg uppercase">Contato</h4>
         <div className="flex items-center gap-2">
@@ -23,7 +26,7 @@ function Contact() {
             title="LinkedIn"
             aria-label="LinkedIn"
           >
-            <LinkedinLogo size={32} weight="fill" />
+            <SiLinkedin size={24} />
           </IconButton>
           <IconButton
             component="a"
@@ -33,7 +36,7 @@ function Contact() {
             title="Github"
             aria-label="Github"
           >
-            <GithubLogo size={32} weight="fill" />
+            <SiGithub size={24} />
           </IconButton>
           <IconButton
             component="a"
@@ -43,7 +46,7 @@ function Contact() {
             title="Whatsapp"
             aria-label="Whatsapp"
           >
-            <WhatsappLogo size={32} weight="fill" />
+            <SiWhatsapp size={24} />
           </IconButton>
         </div>
       </div>
