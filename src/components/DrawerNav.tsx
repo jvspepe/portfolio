@@ -9,7 +9,7 @@ type Props = {
 };
 
 function DrawerNav({ links }: Props) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.style.overflowY = isOpen ? "hidden" : "visible";
