@@ -43,11 +43,8 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <hr className="container mx-auto h-[1px] border-t border-dark-primary" />
       <Skills />
-      <hr className="container mx-auto h-[1px] border-t border-dark-primary" />
       <ProjectDisplay projects={projects} />
-      <hr className="container mx-auto h-[1px] border-t border-dark-primary" />
       <Contact />
     </div>
   );
