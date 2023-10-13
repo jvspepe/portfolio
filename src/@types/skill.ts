@@ -1,6 +1,4 @@
-import { ReactNode } from "react";
-
-export type Skill = {
-  icon: ReactNode;
+export type TSkill = {
+  icon: string;
   label: string;
 };

@@ -1,1 +1,1 @@
-export type Link = { path: string; label: string };
+export type TLink = { path: string; label: string };
