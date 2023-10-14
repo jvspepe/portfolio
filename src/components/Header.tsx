@@ -1,5 +1,6 @@
 import { TLink } from "../@types/link";
 import DrawerNav from "./DrawerNav";
+import Link from "./Link";
 import ThemeToggle from "./ThemeToggle";
 
 type Props = {
@@ -15,7 +16,7 @@ function Header({ links }: Props) {
           <ul className="hidden items-center gap-8 text-lg md:flex">
             {links.map((link) => (
               <li key={link.path}>
-                <a href={link.path}>{link.label}</a>
+                <Link href={link.path}>{link.label}</Link>
               </li>
             ))}
           </ul>

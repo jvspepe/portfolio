@@ -8,11 +8,11 @@ function Hero() {
       className="container mx-auto flex min-h-[calc(100vh_-_5rem)] flex-col justify-center gap-16 px-6 sm:px-0"
     >
       <main className="flex flex-col gap-2">
-        <span>Olá, me chamo</span>
-        <h1 className="bg-gradient-to-r from-fuchsia-500 via-cyan-500 to-pink-500 bg-clip-text text-5xl font-bold text-transparent lg:text-8xl">
+        <span className="md:text-lg lg:text-xl">Olá, me chamo</span>
+        <h1 className="bg-gradient-to-r from-fuchsia-500 via-cyan-500 to-pink-500 bg-clip-text text-5xl font-bold text-transparent lg:text-8xl xl:text-9xl">
           João Victor
         </h1>
-        <p className="md:text-lg">
+        <p className="md:text-lg lg:text-xl">
           Sou um <b>Desenvolvedor Front-end</b>, com paixão em criar interfaces
           de usuário eficientes e visualmente atraentes. Sou comprometido em
           aprimorar minhas habilidades constantemente, buscando alcançar

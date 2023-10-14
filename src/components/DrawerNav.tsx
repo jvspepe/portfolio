@@ -39,8 +39,8 @@ function DrawerNav({ links }: Props) {
           </IconButton>
         }
       >
-        <div className="bg-primary dark:bg-secondary flex h-full flex-col">
-          <div className="flex h-20 w-full items-center justify-end pr-6">
+        <div className="bg-primary dark:bg-secondary  flex h-full flex-col border-l border-neutral-300 dark:border-neutral-700">
+          <div className="flex h-20 w-full items-center justify-end border-b border-neutral-300 pr-6 dark:border-neutral-700">
             <IconButton
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Fechar Menu"
@@ -55,10 +55,10 @@ function DrawerNav({ links }: Props) {
           <ul
             id="nav-list"
             aria-hidden={!isOpen}
-            className="flex flex-col gap-2"
+            className="flex flex-col gap-2 p-2"
           >
             {links.map((link) => (
-              <li key={link.path} className="flex w-full px-2">
+              <li key={link.path} className="flex w-full">
                 <Button
                   onClick={() => setIsOpen(false)}
                   component="a"

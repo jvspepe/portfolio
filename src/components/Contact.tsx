@@ -16,7 +16,7 @@ function Contact() {
       className="container mx-auto flex flex-col gap-8 px-6 py-12 sm:px-0 md:py-24"
     >
       <div className="flex items-center justify-between">
-        <h4 className="text-lg uppercase">Contato</h4>
+        <h4 className="text-lg uppercase lg:text-xl">Contato</h4>
         <div className="flex items-center gap-2">
           <IconButton
             component="a"
