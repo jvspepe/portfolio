@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div
       id="sobre"
-      className="container relative mx-auto flex min-h-[calc(100vh_-_5rem)] flex-col justify-center gap-16 px-6 sm:px-0"
+      className="container relative mx-auto flex min-h-[calc(100dvh_-_5rem)] flex-col justify-center gap-16 px-6 sm:px-0"
     >
       <main className="flex flex-col gap-2">
         <span className="md:text-lg lg:text-xl">Olá, me chamo</span>
