@@ -50,10 +50,8 @@ function Contact() {
           </IconButton>
         </div>
       </div>
-      <form
-        onSubmit={(event) => event.preventDefault()}
-        className="flex grow flex-col gap-4"
-      >
+      <form name="contato" method="post" className="flex grow flex-col gap-4">
+        <input type="hidden" name="form-name" value="contato" />
         <div className="grid auto-cols-fr gap-4 sm:grid-cols-2">
           <div className="flex h-full flex-col justify-between gap-4 sm:gap-0">
             <Input
