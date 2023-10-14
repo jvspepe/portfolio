@@ -20,7 +20,7 @@ function Hero() {
           excelência em cada projeto.
         </p>
       </main>
-      <Button component="a" href="#contact" disableBorder disablePadding>
+      <Button component="a" href="#contato" disableBorder disablePadding>
         <span className="text-2xl">Entrar em contato</span>
         <ArrowRight size={24} />
       </Button>
