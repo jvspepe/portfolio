@@ -1,11 +1,12 @@
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight, CaretDoubleDown } from "@phosphor-icons/react";
 import Button from "./Button";
+import IconButton from "./IconButton";
 
 function Hero() {
   return (
     <div
       id="sobre"
-      className="container mx-auto flex min-h-[calc(100vh_-_5rem)] flex-col justify-center gap-16 px-6 sm:px-0"
+      className="container relative mx-auto flex min-h-[calc(100vh_-_5rem)] flex-col justify-center gap-16 px-6 sm:px-0"
     >
       <main className="flex flex-col gap-2">
         <span className="md:text-lg lg:text-xl">Olá, me chamo</span>
@@ -23,6 +24,15 @@ function Hero() {
         <span className="text-2xl">Entrar em contato</span>
         <ArrowRight size={24} />
       </Button>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+        <IconButton
+          component="a"
+          href="#tecnologias"
+          title="Pular para tecnologias"
+        >
+          <CaretDoubleDown size={32} />
+        </IconButton>
+      </div>
     </div>
   );
 }

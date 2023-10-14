@@ -13,9 +13,9 @@ function Contact() {
   return (
     <section
       id="contato"
-      className="container mx-auto flex flex-col gap-8 px-6 py-12 sm:px-0 md:py-24"
+      className="container mx-auto flex flex-col gap-8 px-6 pb-12 sm:px-0 md:py-24"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between border-t border-neutral-300 pt-12 dark:border-neutral-700">
         <h4 className="text-lg uppercase lg:text-xl">Contato</h4>
         <div className="flex items-center gap-2">
           <IconButton
