@@ -1,7 +1,6 @@
-import { Sun } from "@phosphor-icons/react";
 import { TLink } from "../@types/link";
 import DrawerNav from "./DrawerNav";
-import IconButton from "./IconButton";
+import ThemeToggle from "./ThemeToggle";
 
 type Props = {
   links: TLink[];
@@ -9,7 +8,7 @@ type Props = {
 
 function Header({ links }: Props) {
   return (
-    <header className="container sticky top-0 mx-auto flex h-20 items-center border-b bg-white px-6 sm:px-0">
+    <header className="dark:bg-secondary bg-primary container sticky top-0 mx-auto flex h-20 items-center border-b border-neutral-400 px-6 dark:border-neutral-700 sm:px-0">
       <nav className="flex w-full items-center justify-between">
         <h1 className="text-2xl">JVSP.</h1>
         <div className="flex items-center gap-4">
@@ -20,9 +19,7 @@ function Header({ links }: Props) {
               </li>
             ))}
           </ul>
-          <IconButton aria-label="Mudar tema" title="Mudar tema">
-            <Sun size={24} weight="fill" />
-          </IconButton>
+          <ThemeToggle />
           <DrawerNav links={links} />
         </div>
       </nav>

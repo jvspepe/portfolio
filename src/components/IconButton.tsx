@@ -13,7 +13,7 @@ function IconButton<T extends ElementType = "button">({
   return (
     <Component
       {...props}
-      className="flex items-center justify-center rounded p-1 transition-colors duration-300 hover:bg-neutral-200"
+      className="bg-primary dark:bg-secondary flex items-center justify-center rounded border border-transparent p-1 outline outline-2 outline-offset-0 outline-transparent transition-colors duration-300 hover:bg-neutral-200 focus:border-sky-500 focus:outline-sky-300 dark:hover:bg-neutral-700 dark:focus:border-sky-500 dark:focus:outline-sky-700"
     >
       {props.children}
     </Component>

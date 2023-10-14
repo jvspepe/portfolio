@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply font-inter font-light leading-normal text-dark-primary;
+  @apply bg-primary text-secondary dark:bg-secondary dark:text-primary font-inter font-light leading-normal;
 }

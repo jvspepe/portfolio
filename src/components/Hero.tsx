@@ -1,4 +1,5 @@
 import { ArrowRight } from "@phosphor-icons/react";
+import Button from "./Button";
 
 function Hero() {
   return (
@@ -18,10 +19,10 @@ function Hero() {
           excelência em cada projeto.
         </p>
       </main>
-      <a href="#contact" className="flex items-center gap-3 text-xl font-light">
-        Entrar em contato
+      <Button component="a" href="#contact" disableBorder disablePadding>
+        <span className="text-2xl">Entrar em contato</span>
         <ArrowRight size={24} />
-      </a>
+      </Button>
     </div>
   );
 }
