@@ -60,6 +60,7 @@ function Contact() {
               name="name"
               id="name"
               placeholder="Seu Nome"
+              required
             />
             <Input
               type="email"
@@ -67,6 +68,7 @@ function Contact() {
               name="email"
               placeholder="seu@email.com"
               label="E-mail"
+              required
             />
             <Input
               type="text"
@@ -74,6 +76,7 @@ function Contact() {
               name="subject"
               placeholder="Assunto do e-mail"
               label="Assunto"
+              required
             />
           </div>
           <Input
@@ -83,6 +86,7 @@ function Contact() {
             minRows={8}
             label="Mensagem"
             placeholder="Sua mensagem..."
+            required
           />
         </div>
         <div className="self-end">
