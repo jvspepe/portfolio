@@ -13,7 +13,7 @@ function Link<T extends ElementType = "a">({
   return (
     <Component
       {...props}
-      className="after:bg-secondary dark:after:bg-primary relative rounded border border-transparent p-1 outline outline-2 outline-offset-0 outline-transparent transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 focus:border-sky-300 focus:outline-sky-500 dark:focus:border-sky-500 dark:focus:outline-sky-700"
+      className="relative rounded border border-transparent p-1 outline outline-2 outline-offset-0 outline-transparent transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:scale-x-0 after:bg-secondary after:transition-transform after:duration-300 hover:after:scale-x-100 focus:border-sky-300 focus:outline-sky-500 dark:after:bg-primary dark:focus:border-sky-500 dark:focus:outline-sky-700"
     >
       {props.children}
     </Component>

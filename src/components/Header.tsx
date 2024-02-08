@@ -9,7 +9,7 @@ type Props = {
 
 function Header({ links }: Props) {
   return (
-    <header className="dark:bg-secondary bg-primary container sticky top-0 z-50 mx-auto flex h-20 items-center border-b border-neutral-400 px-6 dark:border-neutral-700 sm:px-0">
+    <header className="container sticky top-0 z-50 mx-auto flex h-20 items-center border-b border-neutral-400 bg-primary px-6 dark:border-neutral-700 dark:bg-secondary sm:px-0">
       <nav className="flex w-full items-center justify-between">
         <h1 className="text-2xl">JVSP.</h1>
         <div className="flex items-center gap-4">
