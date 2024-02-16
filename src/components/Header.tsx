@@ -1,7 +1,6 @@
+import { motion } from "framer-motion";
 import { TLink } from "../@types/link";
-import DrawerNav from "./DrawerNav";
-import Link from "./Link";
-import ThemeToggle from "./ThemeToggle";
+import Link from "@/components/common/Link";
 
 type Props = {
   links: TLink[];
@@ -9,21 +8,20 @@ type Props = {
 
 function Header({ links }: Props) {
   return (
-    <header className="container sticky top-0 z-50 mx-auto flex h-20 items-center border-b border-neutral-400 bg-primary px-6 dark:border-neutral-700 dark:bg-secondary sm:px-0">
-      <nav className="flex w-full items-center justify-between">
-        <h1 className="text-2xl">JVSP.</h1>
-        <div className="flex items-center gap-4">
-          <ul className="hidden items-center gap-8 text-lg md:flex">
-            {links.map((link) => (
-              <li key={link.path}>
-                <Link href={link.path}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-          <ThemeToggle />
-          <DrawerNav links={links} />
-        </div>
-      </nav>
+    <header className="fixed left-1/2 top-0 z-50 flex w-full -translate-x-1/2 items-center sm:top-6 sm:w-fit">
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="flex w-full items-center justify-center border border-white bg-white bg-opacity-80 px-6 py-4 shadow shadow-black/[0.05] backdrop-blur sm:rounded-full"
+      >
+        <ul className="flex items-center justify-between gap-2">
+          {links.map((link) => (
+            <li key={link.path}>
+              <Link href={link.path}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </motion.nav>
     </header>
   );
 }

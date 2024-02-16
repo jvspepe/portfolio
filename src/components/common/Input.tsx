@@ -19,7 +19,7 @@ function Input<T extends ElementType = "input">({
       </label>
       <Component
         {...props}
-        className="w-full resize-none rounded border border-neutral-300 bg-neutral-50 p-2 outline outline-2 outline-offset-0 outline-transparent transition-colors duration-300 hover:border-neutral-400 focus:border-sky-500 focus:outline-sky-300 dark:border-neutral-700 dark:bg-neutral-900 dark:focus:border-sky-500 dark:focus:outline-sky-900"
+        className="w-full resize-none rounded border border-gray-200 p-4 outline-none transition-colors duration-300 hover:border-gray-400 focus:border-gray-400"
       >
         {props.children}
       </Component>

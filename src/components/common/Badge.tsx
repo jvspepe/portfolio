@@ -13,7 +13,7 @@ function Badge<T extends ElementType = "span">({
   return (
     <Component
       {...props}
-      className="flex items-center justify-center rounded-full bg-sky-500 px-2 py-1 font-semibold text-white"
+      className="flex items-center justify-center rounded-full bg-gray-800 px-3 py-1 font-semibold text-white"
     >
       {props.children}
     </Component>

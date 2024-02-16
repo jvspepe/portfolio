@@ -3,7 +3,7 @@ import { TProject } from "@/@types/project";
 const projects: TProject[] = [
   {
     thumbnail: "/images/projeto-1.jpg",
-    title: "Avion Móveis",
+    title: "Avion",
     demo: "https://avion-moveis.netlify.app/",
     source: "https://github.com/jvspepe/react-firebase-avion",
     description:
@@ -18,7 +18,7 @@ const projects: TProject[] = [
   },
   {
     thumbnail: "/images/projeto-2.jpg",
-    title: "North Star Roupas",
+    title: "North Star",
     demo: "https://north-star-roupas.netlify.app/",
     source: "https://github.com/jvspepe/react-firebase-north-star",
     description:
