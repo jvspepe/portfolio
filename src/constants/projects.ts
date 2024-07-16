@@ -4,8 +4,8 @@ const projects: TProject[] = [
   {
     thumbnail: "/images/projeto-1.jpg",
     title: "Avion",
-    demo: "https://avion-moveis.netlify.app/",
-    source: "https://github.com/jvspepe/react-firebase-avion",
+    demo: "https://funira.netlify.app/",
+    source: "https://github.com/jvspepe/funira",
     description:
       "Loja online para uma empresa de móveis artesanais, inclui sistema de autenticação, carrinho e painel de administrador.",
     technologies: [
@@ -20,7 +20,7 @@ const projects: TProject[] = [
     thumbnail: "/images/projeto-2.jpg",
     title: "North Star",
     demo: "https://north-star-roupas.netlify.app/",
-    source: "https://github.com/jvspepe/react-firebase-north-star",
+    source: "https://github.com/jvspepe/north-star",
     description:
       "E-commerce de roupas, construído com acessibilidade e inclui sistema de autenticação, sacola, painel de usuário e administrador.",
     technologies: [
