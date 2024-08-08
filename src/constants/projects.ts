@@ -2,7 +2,7 @@ import { TProject } from "@/@types/project";
 
 const projects: TProject[] = [
   {
-    thumbnail: "/images/projeto-1.jpg",
+    thumbnail: "/images/project-1.jpg",
     title: "Avion",
     demo: "https://funira.netlify.app/",
     source: "https://github.com/jvspepe/funira",
@@ -17,19 +17,13 @@ const projects: TProject[] = [
     ],
   },
   {
-    thumbnail: "/images/projeto-2.jpg",
-    title: "North Star",
-    demo: "https://north-star-roupas.netlify.app/",
-    source: "https://github.com/jvspepe/north-star",
+    thumbnail: "/images/project-2.jpg",
+    title: "Domenico Vernon",
+    demo: "https://domenico-vernon.netlify.app/",
+    source: "https://github.com/jvspepe/domenico-vernon",
     description:
-      "E-commerce de roupas, construído com acessibilidade e inclui sistema de autenticação, sacola, painel de usuário e administrador.",
-    technologies: [
-      "TypeScript",
-      "ReactJS",
-      "ReduxJS",
-      "TailwindCSS",
-      "Firebase",
-    ],
+      "Website construído para uma empresa de planejamentos de casamentos na Itália.",
+    technologies: ["JavaScript", "Sass"],
   },
 ];
 
