@@ -51,7 +51,7 @@ function Hero() {
             </Button>
             <Button
               component="a"
-              href="/pdfs/curriculum-pt.pdf"
+              href="/pdfs/curriculum-pt-2024.pdf"
               target="_blank"
             >
               Baixar currículo
