@@ -49,11 +49,7 @@ function Hero() {
             <Button component="a" href="#contato" variant="dark">
               Entrar em contato
             </Button>
-            <Button
-              component="a"
-              href="/pdfs/curriculum-pt-2024.pdf"
-              target="_blank"
-            >
+            <Button component="a" href="/pdfs/curriculum.pdf" target="_blank">
               Baixar currículo
               <DownloadSimple size={24} />
             </Button>
