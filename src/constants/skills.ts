@@ -10,7 +10,7 @@ const skills: TSkill[] = [
   { icon: "bootstrap", label: "Bootstrap" },
   { icon: "styled-components", label: "Styled-Components" },
   { icon: "tailwindcss", label: "TailwindCSS" },
-  { icon: "material-ui", label: "Material UI" },
+  { icon: "chakra-ui", label: "Chakra UI" },
   { icon: "firebase", label: "Firebase" },
 ];
 

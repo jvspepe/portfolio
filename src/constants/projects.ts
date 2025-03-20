@@ -13,6 +13,7 @@ const projects: TProject[] = [
       "ReactJS",
       "ReduxJS",
       "Styled-Components",
+      "ChakraUI",
       "Firebase",
     ],
   },
@@ -23,7 +24,7 @@ const projects: TProject[] = [
     source: "https://github.com/jvspepe/domenico-vernon",
     description:
       "Website construído para uma empresa de planejamentos de casamentos na Itália.",
-    technologies: ["JavaScript", "Sass"],
+    technologies: ["HTML", "CSS", "JavaScript", "Sass"],
   },
 ];
 
