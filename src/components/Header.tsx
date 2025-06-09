@@ -17,7 +17,7 @@ function Header({ links }: Props) {
         <ul className="flex items-center justify-between gap-2">
           {links.map((link) => (
             <li key={link.path}>
-              <Link href={link.path}>{link.label}</Link>
+              <Link href={`#${link.path}`}>{link.label}</Link>
             </li>
           ))}
         </ul>

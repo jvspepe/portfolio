@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, DownloadSimple } from "@phosphor-icons/react";
+import { ArrowDownIcon, DownloadSimpleIcon } from "@phosphor-icons/react";
 import {
   SiGithub,
   SiLinkedin,
@@ -7,11 +7,18 @@ import {
 } from "@icons-pack/react-simple-icons";
 import Button from "@/components/common/Button";
 import IconButton from "@/components/common/IconButton";
+import { Trans, useTranslation } from "react-i18next";
 
-function Hero() {
+type Props = {
+  sectionId: string;
+};
+
+function Hero({ sectionId }: Props) {
+  const { t } = useTranslation();
+
   return (
     <div
-      id="sobre"
+      id={sectionId}
       className="container relative mx-auto flex min-h-[100dvh] flex-col justify-center gap-16 px-6 sm:px-0"
     >
       <main className="mx-auto flex flex-col gap-6">
@@ -27,14 +34,15 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-lg font-medium leading-normal sm:text-2xl"
         >
-          <span className="">Olá, me chamo </span>
-          <span className="font-bold">João Victor, </span>
-          <span className="">sou um </span>
-          <span className="font-bold">Desenvolvedor Front-end. </span>
-          <span className="">
-            Tenho dedicação e experiência na criação de websites e aplicativos
-            intuitivos e acessíveis utilizando <b>HTML</b>, <b>CSS</b>,{" "}
-            <b>JavaScript</b> e <b>React</b>.
+          <span className="">{t("hero.greeting")}</span>
+          <span className="font-bold">{t("hero.name")}</span>
+          <span className="">{t("hero.rolePrefix")}</span>
+          <span className="font-bold">{t("hero.role")}</span>
+          <span>
+            <Trans
+              i18nKey="hero.description"
+              components={{ bold: <span className="font-bold" /> }}
+            />
           </span>
         </motion.div>
         <motion.div
@@ -47,11 +55,11 @@ function Hero() {
         >
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button component="a" href="#contato" variant="dark">
-              Entrar em contato
+              {t("hero.contact")}
             </Button>
             <Button component="a" href="/pdfs/curriculum.pdf" target="_blank">
-              Baixar currículo
-              <DownloadSimple size={24} />
+              {t("hero.downloadCV")}
+              <DownloadSimpleIcon size={24} />
             </Button>
           </div>
           <div className="flex items-center justify-center gap-2 sm:justify-normal">
@@ -63,7 +71,7 @@ function Hero() {
               title="LinkedIn"
               aria-label="LinkedIn"
             >
-              <SiLinkedin />
+              <SiLinkedin aria-hidden />
             </IconButton>
             <IconButton
               component="a"
@@ -73,7 +81,7 @@ function Hero() {
               title="Github"
               aria-label="Github"
             >
-              <SiGithub />
+              <SiGithub aria-hidden />
             </IconButton>
             <IconButton
               component="a"
@@ -83,12 +91,12 @@ function Hero() {
               title="Whatsapp"
               aria-label="Whatsapp"
             >
-              <SiWhatsapp />
+              <SiWhatsapp aria-hidden />
             </IconButton>
           </div>
         </motion.div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
-          <ArrowDown size={24} />
+          <ArrowDownIcon size={24} />
         </div>
       </main>
     </div>

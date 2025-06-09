@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { TSkill } from "@/@types/skill";
 import SectionHeading from "@/components/common/SectionHeading";
+import { useTranslation } from "react-i18next";
 
 type Props = {
+  sectionId: string;
   skills: TSkill[];
 };
 
@@ -17,13 +19,18 @@ const fadeInAnimationVariants = {
   }),
 };
 
-function SkillDisplay({ skills }: Props) {
+function SkillDisplay({ sectionId, skills }: Props) {
+  const { t } = useTranslation();
+
   return (
     <section
-      id="habilidades"
+      id={sectionId}
       className="container mx-auto flex snap-start scroll-m-24 flex-col justify-center gap-8 px-6 pb-12 sm:px-0 md:pb-24"
     >
-      <SectionHeading title="Habilidades" subtitle="em que me especializo" />
+      <SectionHeading
+        title={t("skills.title")}
+        subtitle={t("skills.subtitle")}
+      />
       <ul className="flex flex-wrap items-center justify-center gap-2">
         {skills.map((skill, index) => (
           <motion.div

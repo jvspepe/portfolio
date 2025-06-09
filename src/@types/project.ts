@@ -3,6 +3,6 @@ export type TProject = {
   title: string;
   source?: string;
   demo?: string;
-  description: string;
+  description: { en: string; pt: string };
   technologies: string[];
 };
