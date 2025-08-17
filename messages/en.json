@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "role": "Front-end Developer",
+    "status": "Available for work"
+  },
+  "about": {
+    "content": "Front-end developer based in <emphasized>Curitiba, Brazil <flag></flag></emphasized>, specializing in building <underlined>interactive</underlined>, <underlined>accessible</underlined> and <underlined>performant</underlined> web applications"
+  },
+  "socials": {
+    "resume": "Resume"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "description": "Technologies I use in my daily life"
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Work experience"
+  }
+}

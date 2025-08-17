@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "role": "Desenvolvedor Front-end",
+    "status": "Disponível para trabalho"
+  },
+  "about": {
+    "content": "Desenvolvedor Front-end baseado em <emphasized>Curitiba, Brasil <flag></flag></emphasized>, especializado em construir aplicações web <underlined>interativas</underlined>, <underlined>acessíveis</underlined> e <underlined>performáticas</underlined>"
+  },
+  "socials": {
+    "resume": "Currículo"
+  },
+  "technologies": {
+    "title": "Tecnologias",
+    "description": "Tecnologias que utilizo no meu dia a dia"
+  },
+  "experience": {
+    "title": "Experiência",
+    "description": "Experiências de trabalho"
+  }
+}
