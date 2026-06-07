@@ -1,32 +1,58 @@
-import React from "react";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
+import {
+  Download01Icon,
+  GithubIcon,
+  Linkedin02Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function Hero() {
-  const t = useTranslations("hero");
-
   return (
-    <main className="flex gap-4">
-      <Image
-        src="/profile.jpg"
-        alt=""
-        width={1024}
-        height={1024}
-        className="aspect-square max-w-[4.5rem] rounded-lg"
-      />
-      <div className="flex flex-col">
-        <h1>João Victor</h1>
-        <p className="text-muted-foreground dark:text-muted-foreground/75">
-          {t("role")}
-        </p>
-        <div className="flex items-center gap-2">
-          <span aria-hidden className="relative flex size-2">
-            <span className="absolute inset-0 animate-ping rounded-full bg-green-500 opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-green-500" />
-          </span>
-          <span>{t("status")}</span>
+    <div className="flex flex-col gap-2">
+      <main className="flex items-center gap-2">
+        <Avatar size="xl">
+          <AvatarImage src="https://github.com/jvspepe.png" />
+          <AvatarFallback>JV</AvatarFallback>
+        </Avatar>
+        <div>
+          <h1>João Victor</h1>
+          <p className="text-muted-foreground">Full Stack Web Developer</p>
+          <div className="flex items-center gap-2">
+            <div className="size-2 animate-pulse rounded-full bg-emerald-500" />
+            <span>Available for work</span>
+          </div>
         </div>
+      </main>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://github.com/jvspepe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
+        >
+          <HugeiconsIcon icon={GithubIcon} className="size-4" />
+          Github
+        </a>
+        <a
+          href="https://linkedin.com/in/jvspepe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
+        >
+          <HugeiconsIcon icon={Linkedin02Icon} className="size-4" />
+          LinkedIn
+        </a>
+        <a
+          href="https://linkedin.com/in/jvspepe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
+        >
+          <HugeiconsIcon icon={Download01Icon} className="size-4" />
+          Curriculum
+        </a>
       </div>
-    </main>
+    </div>
   );
 }

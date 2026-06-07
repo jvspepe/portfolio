@@ -1,5 +1,4 @@
-import { ThemeToggle } from "./theme-toggle";
-import { Badge } from "./ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Header() {
   return (

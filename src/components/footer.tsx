@@ -1,43 +1,49 @@
-import Link from "next/link";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
+import {
+  GithubIcon,
+  Linkedin02Icon,
+  DownloadIcon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 
 export function Footer() {
   return (
     <footer className="flex flex-col gap-4">
-      <Link
-        href="https://www.linkedin.com/in/jvspepe"
-        target="_blank"
-        className="text-muted-foreground dark:text-muted-foreground/75 hover:text-primary dark:hover:text-primary flex items-center justify-between transition-colors duration-200"
-      >
-        <div className="flex items-center gap-2">
-          <FaLinkedin aria-hidden />
-          <span>LinkedIn</span>
-        </div>
-        <span>/in/jvspepe</span>
-      </Link>
-      <Link
+      <a
         href="https://github.com/jvspepe"
         target="_blank"
-        className="text-muted-foreground dark:text-muted-foreground/75 hover:text-primary dark:hover:text-primary flex items-center justify-between transition-colors duration-200"
+        className="flex items-center justify-between text-muted-foreground transition-colors duration-200 hover:text-primary dark:text-muted-foreground/75 dark:hover:text-primary"
       >
         <div className="flex items-center gap-2">
-          <FaGithub aria-hidden />
+          <HugeiconsIcon icon={GithubIcon} aria-hidden />
+
           <span>GitHub</span>
         </div>
         <span>/jvspepe</span>
-      </Link>
-      <Link
-        href="mailto:jvspepe@proton.me"
-        className="text-muted-foreground dark:text-muted-foreground/75 hover:text-primary dark:hover:text-primary flex items-center justify-between transition-colors duration-200"
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jvspepe"
+        target="_blank"
+        className="flex items-center justify-between text-muted-foreground transition-colors duration-200 hover:text-primary dark:text-muted-foreground/75 dark:hover:text-primary"
       >
         <div className="flex items-center gap-2">
-          <FaEnvelope aria-hidden />
-          <span>E-mail</span>
+          <HugeiconsIcon icon={Linkedin02Icon} aria-hidden />
+          <span>LinkedIn</span>
         </div>
-        <span>jvspepe@proton.me</span>
-      </Link>
-      <span className="text-center">
-        Made with &#9829; by João Victor &#169; 2025
+        <span>/in/jvspepe</span>
+      </a>
+
+      <a
+        href="mailto:jvspepe@proton.me"
+        className="flex items-center justify-between text-muted-foreground transition-colors duration-200 hover:text-primary dark:text-muted-foreground/75 dark:hover:text-primary"
+      >
+        <div className="flex items-center gap-2">
+          <HugeiconsIcon icon={DownloadIcon} aria-hidden />
+          <span>Curriculum</span>
+        </div>
+        <span>Download</span>
+      </a>
+      <span className="text-center text-sm text-muted-foreground">
+        Made by João Victor
       </span>
     </footer>
   );

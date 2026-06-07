@@ -1,53 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ReactNode } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import type { CSSProperties } from "react";
+
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "@/components/ui/card";
+import type { Project } from "@/types";
 
-type ProjectCardProps = {
-  title: string;
-  technologies: ReactNode;
-  description: string;
-  image: string;
-  gradientColor: string;
-};
+interface ProjectCardProps {
+  project: Project;
+}
 
-export function ProjectCard({
-  title,
-  technologies,
-  description,
-  image,
-  gradientColor,
-}: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card
-      className="relative px-6 pt-6 pb-0"
-      style={{
-        background: `radial-gradient(circle at top, ${gradientColor}90, ${gradientColor}00)`,
-      }}
+      className="relative bg-[radial-gradient(circle_at_top,color-mix(in_srgb,var(--gradient-color)_70%,transparent),var(--gradient-color))] px-6 pt-6 pb-0 dark:bg-[radial-gradient(circle_at_top,color-mix(in_srgb,var(--gradient-color)_56%,transparent),transparent)]"
+      // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+      style={{ "--gradient-color": project.gradientColor } as CSSProperties}
     >
       <CardHeader className="p-0">
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-        <CardAction>
-          <Link href="#">
-            <span className="sr-only">Ver projeto</span>
-            <FaArrowRight aria-hidden />
-          </Link>
-        </CardAction>
+        <CardTitle>{project.title}</CardTitle>
+        <CardDescription className="text-foreground/75">
+          {project.description}
+        </CardDescription>
       </CardHeader>
-      <CardContent className="flex items-center gap-2 p-0">
-        {technologies}
+      <CardContent className="flex flex-wrap items-center gap-2 p-0">
+        {project.technologies.map((technology, index) => (
+          <div
+            key={`${technology.name}-${index}`}
+            className="flex items-center gap-2 rounded-full bg-black/40 px-2 py-1 text-white dark:bg-black/20"
+          >
+            {technology.icon}
+            {technology.name}
+          </div>
+        ))}
       </CardContent>
-      <Image
-        src={image}
+      <img
+        src={project.image}
         alt=""
         width={1920}
         height={1080}

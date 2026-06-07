@@ -1,67 +1,97 @@
-import { ReactNode } from "react";
-import { useTranslations } from "next-intl";
-import { FirebaseIcon } from "@/assets/firebase-icon";
-import { TypeScriptIcon } from "@/assets/typescript-icon";
-import { NextJsIcon } from "@/assets/nextjs-icon";
-import { ReactIcon } from "@/assets/react-icon";
-import { TailwindCssIcon } from "@/assets/tailwindcss-icon";
-import { TanstackQueryIcon } from "@/assets/tanstackquery-icon";
-import { Button } from "@/components/ui/button";
-
-type Technology = {
-  name: string;
-  icon: ReactNode;
-};
+import type { Technology } from "@/types";
 
 const technologies: Technology[] = [
   {
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/typescript/default.svg"
+        alt="TypeScript"
+        className="size-8"
+      />
+    ),
     name: "TypeScript",
-    icon: <TypeScriptIcon className="size-5 sm:size-6" />,
   },
   {
-    name: "React.js",
-    icon: <ReactIcon className="size-5 sm:size-6" />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/react/default.svg"
+        alt="React"
+        className="size-8"
+      />
+    ),
+    name: "React",
   },
   {
-    name: "Next.js",
-    icon: <NextJsIcon className="size-5 sm:size-6" />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tanstack/default.svg"
+        alt="Tanstack Start"
+        className="size-8"
+      />
+    ),
+    name: "Tanstack Start",
   },
   {
-    name: "React Query",
-    icon: <TanstackQueryIcon className="size-5 sm:size-6" />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/nodedotjs/default.svg"
+        alt="Node.js"
+        className="size-8"
+      />
+    ),
+    name: "Node.js",
   },
   {
-    name: "Tailwind CSS",
-    icon: <TailwindCssIcon className="size-5 sm:size-6" />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mysql/light.svg"
+        alt="MySQL"
+        className="size-8"
+      />
+    ),
+    name: "MySQL",
   },
   {
-    name: "Firebase",
-    icon: <FirebaseIcon className="size-5 sm:size-6" />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/postgresql/default.svg"
+        alt="PostgreSQL"
+        className="size-8"
+      />
+    ),
+    name: "PostgreSQL",
+  },
+  {
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mongodb/default.svg"
+        alt="MongoDB"
+        className="size-8"
+      />
+    ),
+    name: "MongoDB",
+  },
+  {
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/docker/default.svg"
+        alt="Docker"
+        className="size-8"
+      />
+    ),
+    name: "Docker",
   },
 ];
 
 export function Technologies() {
-  const t = useTranslations("technologies");
-
   return (
-    <section className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1">
-        <h2 className="font-geist-mono text-muted-foreground dark:text-muted-foreground/50 text-xs uppercase">
-          {t("title")}
-        </h2>
-        <p className="text-muted-foreground dark:text-muted-foreground/75">
-          {t("description")}
-        </p>
-      </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-        {technologies.map((tech) => (
-          <Button key={tech.name} asChild variant="secondary">
-            <span>
-              {tech.icon} {tech.name}
-            </span>
-          </Button>
-        ))}
-      </div>
-    </section>
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {technologies.map((technology) => (
+        <div key={technology.name} className="flex flex-col items-center">
+          {technology.icon}
+          <span className="text-sm">{technology.name}</span>
+        </div>
+      ))}
+    </div>
   );
 }
