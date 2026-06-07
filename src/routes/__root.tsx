@@ -3,7 +3,6 @@ import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { ThemeProvider } from "@/components/theme-provider";
-
 import appCss from "@/styles.css?url";
 
 export const Route = createRootRoute({
@@ -14,9 +13,9 @@ export const Route = createRootRoute({
         rel: "stylesheet",
       },
       {
+        href: "/favicon.jpg",
         rel: "icon",
         type: "image/jpg",
-        href: "/favicon.jpg",
       },
     ],
     meta: [

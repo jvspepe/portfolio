@@ -1,8 +1,9 @@
+import type { InferInput } from "valibot";
+
 // oxlint-disable jsx-a11y/control-has-associated-label
 import { Chatting01Icon, MailIcon, UserIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useForm } from "@tanstack/react-form";
-import type { InferInput } from "valibot";
 import { email, nonEmpty, object, pipe, string } from "valibot";
 
 import { Button } from "@/components/ui/button";

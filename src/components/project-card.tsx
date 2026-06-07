@@ -1,5 +1,7 @@
 import type { CSSProperties } from "react";
 
+import type { Project } from "@/types";
+
 import {
   Card,
   CardContent,
@@ -7,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import type { Project } from "@/types";
 
 interface ProjectCardProps {
   project: Project;

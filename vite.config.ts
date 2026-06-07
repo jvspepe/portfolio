@@ -1,3 +1,4 @@
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import netlify from "@netlify/vite-plugin-tanstack-start";
 import tailwindcss from "@tailwindcss/vite";
 import { devtools } from "@tanstack/devtools-vite";
@@ -6,7 +7,17 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 const config = defineConfig({
-  plugins: [devtools(), netlify(), tailwindcss(), tanstackStart(), viteReact()],
+  plugins: [
+    paraglideVitePlugin({
+      outdir: "./src/paraglide",
+      project: "./project.inlang",
+    }),
+    devtools(),
+    netlify(),
+    tailwindcss(),
+    tanstackStart(),
+    viteReact(),
+  ],
   resolve: { tsconfigPaths: true },
 });
 
