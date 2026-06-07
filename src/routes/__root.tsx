@@ -13,6 +13,11 @@ export const Route = createRootRoute({
         href: appCss,
         rel: "stylesheet",
       },
+      {
+        rel: "icon",
+        type: "image/jpg",
+        href: "/favicon.jpg",
+      },
     ],
     meta: [
       {
@@ -22,8 +27,9 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
         name: "viewport",
       },
+
       {
-        title: "TanStack Start Starter",
+        title: "Full Stack Developer | João Victor",
       },
     ],
   }),

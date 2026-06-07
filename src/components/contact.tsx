@@ -144,7 +144,7 @@ export function Contact() {
               return (
                 <Field data-invalid={isInvalid}>
                   <FieldLabel htmlFor={field.name} className="sr-only">
-                    Username
+                    Message
                   </FieldLabel>
                   <InputGroup className="h-11 border-input/75">
                     <InputGroupTextarea
@@ -160,7 +160,7 @@ export function Contact() {
                     />
                     <InputGroupAddon align="block-start">
                       <HugeiconsIcon icon={Chatting01Icon} />
-                      <InputGroupText className="text-base">
+                      <InputGroupText className="text-base font-normal">
                         Leave me a message
                       </InputGroupText>
                     </InputGroupAddon>
