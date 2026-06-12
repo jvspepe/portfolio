@@ -18,6 +18,7 @@
     "@fontsource-variable/inter": "^5.2.8",
     "@hugeicons/core-free-icons": "^4.2.0",
     "@hugeicons/react": "^1.1.6",
+    "@inlang/paraglide-js-react": "^1.0.2",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-form": "^1.33.0",
@@ -40,6 +41,7 @@
     "valibot": "^1.4.1"
   },
   "devDependencies": {
+    "@inlang/paraglide-js": "^2.18.2",
     "@netlify/vite-plugin-tanstack-start": "^1.2.15",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/devtools-vite": "latest",

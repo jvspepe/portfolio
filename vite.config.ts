@@ -9,8 +9,25 @@ import { defineConfig } from "vite";
 const config = defineConfig({
   plugins: [
     paraglideVitePlugin({
+      cookieName: "jvspepe_portfolio",
       outdir: "./src/paraglide",
       project: "./project.inlang",
+      strategy: [
+        "localStorage",
+        "cookie",
+        "preferredLanguage",
+        "url",
+        "baseLocale",
+      ],
+      urlPatterns: [
+        {
+          localized: [
+            ["en", "/en/:path(.*)?"],
+            ["pt", "/pt/:path(.*)?"],
+          ],
+          pattern: "/:path(.*)?",
+        },
+      ],
     }),
     devtools(),
     netlify(),

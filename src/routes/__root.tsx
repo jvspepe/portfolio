@@ -3,6 +3,7 @@ import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { getLocale } from "@/paraglide/runtime.js";
 import appCss from "@/styles.css?url";
 
 export const Route = createRootRoute({
@@ -36,8 +37,10 @@ export const Route = createRootRoute({
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const locale = getLocale();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

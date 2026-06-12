@@ -15,7 +15,7 @@ export interface Project {
 
 export interface Experience {
   company: string;
-  description: string;
+  description: ReactNode;
   role: string;
   logoUrl: string;
   period: string;

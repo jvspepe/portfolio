@@ -15,6 +15,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from "@/components/ui/input-group";
+import { m } from "@/paraglide/messages.js";
 
 const ContactFormSchema = object({
   email: pipe(string(), nonEmpty(), email()),
@@ -57,7 +58,7 @@ export function Contact() {
   return (
     <section className="flex flex-col gap-2">
       <h6 className="text-sm text-muted-foreground uppercase dark:text-muted-foreground/75">
-        Contact
+        {m["contact.header"]()}
       </h6>
       <form name="contact" data-netlify="true" hidden>
         <input name="name" />
@@ -81,7 +82,7 @@ export function Contact() {
               return (
                 <Field data-invalid={isInvalid}>
                   <FieldLabel htmlFor={field.name} className="sr-only">
-                    Name
+                    {m["contact.name"]()}
                   </FieldLabel>
                   <InputGroup className="h-11 border-input/75">
                     <InputGroupInput
@@ -94,7 +95,7 @@ export function Contact() {
                       }}
                       aria-invalid={isInvalid}
                       type="text"
-                      placeholder="Your name"
+                      placeholder={m["contact.name_placeholder"]()}
                     />
                     <InputGroupAddon align="inline-start">
                       <HugeiconsIcon icon={UserIcon} />
@@ -113,7 +114,7 @@ export function Contact() {
               return (
                 <Field data-invalid={isInvalid}>
                   <FieldLabel htmlFor={field.name} className="sr-only">
-                    Name
+                    {m["contact.email"]()}
                   </FieldLabel>
                   <InputGroup className="h-11 border-input/75">
                     <InputGroupInput
@@ -126,7 +127,7 @@ export function Contact() {
                       }}
                       aria-invalid={isInvalid}
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder={m["contact.email_placeholder"]()}
                     />
                     <InputGroupAddon align="inline-start">
                       <HugeiconsIcon icon={MailIcon} />
@@ -145,7 +146,7 @@ export function Contact() {
               return (
                 <Field data-invalid={isInvalid}>
                   <FieldLabel htmlFor={field.name} className="sr-only">
-                    Message
+                    {m["contact.message"]()}
                   </FieldLabel>
                   <InputGroup className="h-11 border-input/75">
                     <InputGroupTextarea
@@ -162,7 +163,7 @@ export function Contact() {
                     <InputGroupAddon align="block-start">
                       <HugeiconsIcon icon={Chatting01Icon} />
                       <InputGroupText className="text-base font-normal">
-                        Leave me a message
+                        {m["contact.message_placeholder"]()}
                       </InputGroupText>
                     </InputGroupAddon>
                   </InputGroup>
@@ -172,7 +173,7 @@ export function Contact() {
             }}
           </form.Field>
           <Button type="submit" className="w-fit" variant="secondary">
-            Send message
+            {m["contact.submit"]()}
           </Button>
         </div>
       </form>

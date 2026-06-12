@@ -6,6 +6,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { m } from "@/paraglide/messages.js";
 
 export function Hero() {
   return (
@@ -17,10 +18,10 @@ export function Hero() {
         </Avatar>
         <div>
           <h1>João Victor</h1>
-          <p className="text-muted-foreground">Full Stack Web Developer</p>
+          <p className="text-muted-foreground">{m["header.role"]()}</p>
           <div className="flex items-center gap-2">
             <div className="size-2 animate-pulse rounded-full bg-emerald-500" />
-            <span>Available for work</span>
+            <span>{m["header.status"]()}</span>
           </div>
         </div>
       </main>

@@ -12,6 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { m } from "@/paraglide/messages.js";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
@@ -27,32 +28,32 @@ export function ThemeToggle() {
           icon={Moon02Icon}
           className="absolute size-5 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
         />
-        <span className="sr-only">Toggle theme</span>
+        <span className="sr-only">{m["themes.label"]()}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuGroup>
-          <DropdownMenuLabel>Color theme</DropdownMenuLabel>
+          <DropdownMenuLabel>{m["themes.header"]()}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem
             onClick={() => {
               setTheme("light");
             }}
           >
-            Light
+            {m["themes.light"]()}
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => {
               setTheme("dark");
             }}
           >
-            Dark
+            {m["themes.dark"]()}
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => {
               setTheme("system");
             }}
           >
-            System
+            {m["themes.system"]()}
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>

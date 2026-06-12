@@ -1,21 +1,41 @@
+import { ParaglideMessage } from "@inlang/paraglide-js-react";
+
 import type { Experience } from "@/types";
+
+import { m } from "@/paraglide/messages.js";
 
 const experiences: Experience[] = [
   {
-    company: "Larafy",
-    description:
-      "Development of a tailored task management platform for the accounting industry using TypeScript, React.js, TanStack Start, Tailwind CSS, and PostgreSQL;- Development of accounting task automations using Python and Playwright.",
+    company: m["experiences.larafy.company"](),
+    description: (
+      <ParaglideMessage
+        message={m["experiences.larafy.description"]}
+        markup={{
+          strong: ({ children }) => (
+            <strong className="font-normal text-foreground">{children}</strong>
+          ),
+        }}
+      />
+    ),
     logoUrl: "/larafy-logo.jpg",
-    period: "Sep 2025 - Now",
-    role: "Software Developer",
+    period: m["experiences.larafy.period"](),
+    role: m["experiences.larafy.role"](),
   },
   {
-    company: "Personal Vestibulares",
-    description:
-      "Development of a platform geared toward teachers and students using TypeScript, React.js, Tailwind CSS, NoSQL, Firebase, and Stripe;- Responsible for migrating the codebase from JavaScript to TypeScript.",
+    company: m["experiences.personal_vestibulares.company"](),
+    description: (
+      <ParaglideMessage
+        message={m["experiences.personal_vestibulares.description"]}
+        markup={{
+          strong: ({ children }) => (
+            <strong className="font-normal text-foreground">{children}</strong>
+          ),
+        }}
+      />
+    ),
     logoUrl: "https://www.personalvestibulares.com.br/images/PV/favicon.ico",
-    period: "Oct. 2024 - Sep. 2025",
-    role: "Front-End Developer",
+    period: m["experiences.personal_vestibulares.period"](),
+    role: m["experiences.personal_vestibulares.role"](),
   },
 ];
 
@@ -42,11 +62,9 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </span>
         </div>
       </div>
-      <ul className="list-inside list-disc text-muted-foreground dark:text-muted-foreground">
-        {experience.description.split("-").map((task) => (
-          <li key={task}>{task}</li>
-        ))}
-      </ul>
+      <span className="list-inside list-disc whitespace-pre-wrap text-muted-foreground dark:text-muted-foreground">
+        {experience.description}
+      </span>
     </article>
   );
 }
@@ -55,7 +73,7 @@ export function Experiences() {
   return (
     <div className="flex flex-col gap-2">
       <h2 className="text-sm text-muted-foreground uppercase dark:text-muted-foreground/75">
-        Experiences
+        {m["experiences.header"]()}
       </h2>
       <div className="flex flex-col gap-6">
         {experiences.map((experience) => (

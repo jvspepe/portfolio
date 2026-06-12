@@ -1,10 +1,11 @@
 import type { Project } from "@/types";
 
 import { ProjectCard } from "@/components/project-card";
+import { m } from "@/paraglide/messages.js";
 
 const projects: Project[] = [
   {
-    description: "Furniture E-commerce",
+    description: m["projects.funira.description"](),
     gradientColor: "#ECD1BF",
     image: "/funira.jpg",
     technologies: [
@@ -72,7 +73,7 @@ const projects: Project[] = [
     title: "Larafy",
   },
   {
-    description: "Italian Wedding Services",
+    description: m["projects.domenico_vernon.description"](),
     gradientColor: "#819191",
     image: "/domenico-vernon.jpg",
     technologies: [
@@ -115,7 +116,7 @@ export function Projects() {
   return (
     <div className="flex flex-col gap-2">
       <h4 className="text-sm text-muted-foreground uppercase dark:text-muted-foreground/75">
-        Projects
+        {m["projects.header"]()}
       </h4>
       <div className="flex flex-col gap-6">
         {projects.map((project) => (
