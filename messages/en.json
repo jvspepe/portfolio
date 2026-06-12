@@ -1,0 +1,57 @@
+{
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "languages": {
+        "header": "Languages",
+        "label": "Change language",
+        "portuguese": "Portuguese",
+        "english": "English"
+    },
+    "themes": {
+        "header": "Themes",
+        "label": "Change theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    },
+    "header": {
+        "role": "Full Stack Web Developer",
+        "status": "Available for work"
+    },
+    "about": "{#strong}Full Stack Web Developer{/strong} based in {#strong}Brazil{/strong}, specializing in interactive, accessible and performant web applications.",
+    "experiences": {
+        "header": "Experience",
+        "larafy": {
+            "company": "Larafy",
+            "description": "- Development of a tailored task management platform for the accounting industry using {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}TanStack Start{/strong}, {#strong}Tailwind CSS{/strong} and {#strong}PostgreSQL{/strong};\n- Development of accounting task automations using {#strong}Python{/strong} and {#strong}Playwright{/strong}.",
+            "logoUrl": "/larafy-logo.jpg",
+            "period": "Sep. 2025 - Now",
+            "role": "Software Developer"
+        },
+        "personal_vestibulares": {
+            "company": "Personal Vestibulares",
+            "description": "- Development of a platform geared toward teachers and students using {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}Tailwind CSS{/strong}, {#strong}NoSQL{/strong}, {#strong}Firebase{/strong} and {#strong}Stripe{/strong};\n- Responsible for migrating the codebase from {#strong}JavaScript{/strong} to {#strong}TypeScript{/strong}.",
+            "logoUrl": "https://www.personalvestibulares.com.br/images/PV/favicon.ico",
+            "period": "Oct. 2024 - Sep. 2025",
+            "role": "Front-End Developer"
+        }
+    },
+    "projects": {
+        "header": "Projects",
+        "funira": {
+            "description": "Furniture E-commerce"
+        },
+        "domenico_vernon": {
+            "description": "Italian Wedding Services"
+        }
+    },
+    "contact": {
+        "header": "Contact",
+        "name": "Name",
+        "name_placeholder": "Your name",
+        "email": "E-mail",
+        "email_placeholder": "your@email.com",
+        "message": "Message",
+        "message_placeholder": "Leave me a message",
+        "submit": "Send message"
+    }
+}

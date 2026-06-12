@@ -1,0 +1,66 @@
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+
+import { ThemeProvider } from "@/components/theme-provider";
+import { getLocale } from "@/paraglide/runtime.js";
+import appCss from "@/styles.css?url";
+
+export const Route = createRootRoute({
+  head: () => ({
+    links: [
+      {
+        href: appCss,
+        rel: "stylesheet",
+      },
+      {
+        href: "/favicon.jpg",
+        rel: "icon",
+        type: "image/jpg",
+      },
+    ],
+    meta: [
+      {
+        charSet: "utf-8",
+      },
+      {
+        content: "width=device-width, initial-scale=1",
+        name: "viewport",
+      },
+
+      {
+        title: "Full Stack Developer | João Victor",
+      },
+    ],
+  }),
+  shellComponent: RootDocument,
+});
+
+function RootDocument({ children }: { children: React.ReactNode }) {
+  const locale = getLocale();
+
+  return (
+    <html lang={locale} suppressHydrationWarning>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        <ThemeProvider>
+          {children}
+          <TanStackDevtools
+            config={{
+              position: "bottom-right",
+            }}
+            plugins={[
+              {
+                name: "Tanstack Router",
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+        </ThemeProvider>
+        <Scripts />
+      </body>
+    </html>
+  );
+}
