@@ -1,3 +1,4 @@
+// oxlint-disable typescript/promise-function-async
 import handler from "@tanstack/react-start/server-entry";
 
 import { paraglideMiddleware } from "./paraglide/server.js";
