@@ -5,7 +5,11 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
+import { getLocale } from "@/paraglide/runtime";
+
 export function Footer() {
+  const locale = getLocale();
+
   return (
     <footer className="flex flex-col gap-4">
       <a
@@ -15,7 +19,6 @@ export function Footer() {
       >
         <div className="flex items-center gap-2">
           <HugeiconsIcon icon={GithubIcon} aria-hidden />
-
           <span>GitHub</span>
         </div>
         <span>/jvspepe</span>
@@ -33,7 +36,12 @@ export function Footer() {
       </a>
 
       <a
-        href="mailto:jvspepe@proton.me"
+        href={
+          locale === "pt"
+            ? "/joao-victor-dev-curriculo.pdf"
+            : "/joao-victor-dev-curriculum.pdf"
+        }
+        download
         className="flex items-center justify-between text-muted-foreground transition-colors duration-200 hover:text-primary dark:text-muted-foreground/75 dark:hover:text-primary"
       >
         <div className="flex items-center gap-2">

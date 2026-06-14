@@ -1,57 +1,57 @@
 {
-    "$schema": "https://inlang.com/schema/inlang-message-format",
-    "languages": {
-        "header": "Idiomas",
-        "label": "Trocar idioma",
-        "portuguese": "Português",
-        "english": "Inglês"
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "languages": {
+    "header": "Idiomas",
+    "label": "Trocar idioma",
+    "portuguese": "Português",
+    "english": "Inglês"
+  },
+  "themes": {
+    "header": "Temas",
+    "label": "Troca tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "header": {
+    "role": "Desenvolvedor Full Stack Web",
+    "status": "Disponível para trabalho"
+  },
+  "about": "{#strong}Desenvolvedor Web Full Stack{/strong} morando no {#strong}Brasil{/strong}, especializando em aplicações web interativas, acessíveis e performáticas.",
+  "experiences": {
+    "header": "Experiência",
+    "larafy": {
+      "company": "Larafy",
+      "description": "- Desenvolvimento de uma plataforma de gerenciamento de tarefas dedicada para o setor contábil utilizando {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}Tanstack Start{/strong}, {#strong}TailwindCSS{/strong} e {#strong}MySQL{/strong};\n- Desenvolvimento de automações de tarefas contábeis utilizando {#strong}Python{/strong} e {#strong}Playwright{/strong}.",
+      "logoUrl": "/larafy-logo.jpg",
+      "period": "Sep. 2025 - Presente",
+      "role": "Software Developer"
     },
-    "themes": {
-        "header": "Temas",
-        "label": "Troca tema",
-        "light": "Claro",
-        "dark": "Escuro",
-        "system": "Sistema"
-    },
-    "header": {
-        "role": "Desenvolvedor Full Stack Web",
-        "status": "Disponível para trabalho"
-    },
-    "about": "{#strong}Desenvolvedor Web Full Stack{/strong} morando no {#strong}Brasil{/strong}, especializando em aplicações web interativas, acessíveis e performáticas.",
-    "experiences": {
-        "header": "Experiência",
-        "larafy": {
-            "company": "Larafy",
-            "description": "- Desenvolvimento de plataforma de gerenciamento de tarefas dedicada para o setor contábil utilizando {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}Tanstack Start{/strong}, {#strong}TailwindCSS{/strong} e {#strong}PostgreSQL{/strong};\n- Desenvolvimento de automações de tarefas contábeis utilizando {#strong}Python{/strong} e {#strong}Playwright{/strong}.",
-            "logoUrl": "/larafy-logo.jpg",
-            "period": "Sep. 2025 - Presente",
-            "role": "Software Developer"
-        },
-        "personal_vestibulares": {
-            "company": "Personal Vestibulares",
-            "description": "- Desenvolvimento de ferramentas direcionado à professores e estudantes utilizando {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}TailwindCSS{/strong}, {#strong}NoSQL{/strong}, {#strong}Firebase{/strong} e {#strong}Stripe{/strong};\n- Responsável pela migração da base de código de {#strong}JavaScript{/strong} para {#strong}TypeScript{/strong}.",
-            "logoUrl": "https: //www.personalvestibulares.com.br/images/PV/favicon.ico",
-            "period": "Out. 2024 - Sep. 2025",
-            "role": "Front-End Developer"
-        }
-    },
-    "projects": {
-        "header": "Projetos",
-        "funira": {
-            "description": "E-commerce de móveis"
-        },
-        "domenico_vernon": {
-            "description": "Serviços de Casamento Italiano"
-        }
-    },
-    "contact": {
-        "header": "Contato",
-        "name": "Nome",
-        "name_placeholder": "Seu nome",
-        "email": "E-mail",
-        "email_placeholder": "seu@email.com",
-        "message": "Mensagem",
-        "message_placeholder": "Deixa sua mensagem",
-        "submit": "Enviar mensagem"
+    "personal_vestibulares": {
+      "company": "Personal Vestibulares",
+      "description": "- Desenvolvimento de ferramentas direcionado à professores e estudantes utilizando {#strong}TypeScript{/strong}, {#strong}React.js{/strong}, {#strong}TailwindCSS{/strong}, {#strong}Firebase{/strong} e {#strong}Stripe{/strong};\n- Responsável pela migração da base de código de {#strong}JavaScript{/strong} para {#strong}TypeScript{/strong}.",
+      "logoUrl": "https: //www.personalvestibulares.com.br/images/PV/favicon.ico",
+      "period": "Out. 2024 - Sep. 2025",
+      "role": "Front-End Developer"
     }
+  },
+  "projects": {
+    "header": "Projetos",
+    "funira": {
+      "description": "E-commerce de móveis"
+    },
+    "domenico_vernon": {
+      "description": "Serviços de Casamento Italiano"
+    }
+  },
+  "contact": {
+    "header": "Contato",
+    "name": "Nome",
+    "name_placeholder": "Seu nome",
+    "email": "E-mail",
+    "email_placeholder": "seu@email.com",
+    "message": "Mensagem",
+    "message_placeholder": "Deixa sua mensagem",
+    "submit": "Enviar mensagem"
+  }
 }

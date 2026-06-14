@@ -7,8 +7,11 @@ import { HugeiconsIcon } from "@hugeicons/react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { m } from "@/paraglide/messages.js";
+import { getLocale } from "@/paraglide/runtime";
 
 export function Hero() {
+  const locale = getLocale();
+
   return (
     <div className="flex flex-col gap-2">
       <main className="flex items-center gap-2">
@@ -45,9 +48,12 @@ export function Hero() {
           LinkedIn
         </a>
         <a
-          href="https://linkedin.com/in/jvspepe"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={
+            locale === "pt"
+              ? "/joao-victor-dev-curriculo.pdf"
+              : "/joao-victor-dev-curriculum.pdf"
+          }
+          download
           className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
         >
           <HugeiconsIcon icon={Download01Icon} className="size-4" />
