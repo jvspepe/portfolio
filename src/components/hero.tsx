@@ -35,7 +35,7 @@ export function Hero() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
         >
-          <HugeiconsIcon icon={GithubIcon} className="size-4" />
+          <HugeiconsIcon icon={GithubIcon} aria-hidden className="size-4" />
           Github
         </a>
         <a
@@ -44,7 +44,7 @@ export function Hero() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
         >
-          <HugeiconsIcon icon={Linkedin02Icon} className="size-4" />
+          <HugeiconsIcon icon={Linkedin02Icon} aria-hidden className="size-4" />
           LinkedIn
         </a>
         <a
@@ -56,7 +56,7 @@ export function Hero() {
           download
           className="flex items-center gap-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
         >
-          <HugeiconsIcon icon={Download01Icon} className="size-4" />
+          <HugeiconsIcon icon={Download01Icon} aria-hidden className="size-4" />
           Curriculum
         </a>
       </div>

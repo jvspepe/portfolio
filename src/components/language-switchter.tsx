@@ -17,8 +17,12 @@ import { setLocale } from "@/paraglide/runtime";
 export function LanguageSwitcher() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="ghost" size="icon" />}>
-        <HugeiconsIcon icon={LanguageCircleIcon} className="size-5" />
+      <DropdownMenuTrigger render={<Button variant="ghost" />}>
+        <HugeiconsIcon
+          icon={LanguageCircleIcon}
+          aria-hidden
+          className="size-5"
+        />
         <span className="sr-only">{m["languages.label"]()}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

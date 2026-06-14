@@ -23,7 +23,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <CardHeader className="p-0">
         <CardTitle>{project.title}</CardTitle>
-        <CardDescription className="text-foreground/75">
+        <CardDescription className="text-foreground">
           {project.description}
         </CardDescription>
       </CardHeader>

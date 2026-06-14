@@ -97,7 +97,7 @@ export function Contact() {
                       type="text"
                       placeholder={m["contact.name_placeholder"]()}
                     />
-                    <InputGroupAddon align="inline-start">
+                    <InputGroupAddon align="inline-start" aria-hidden>
                       <HugeiconsIcon icon={UserIcon} />
                     </InputGroupAddon>
                   </InputGroup>
@@ -129,7 +129,7 @@ export function Contact() {
                       type="email"
                       placeholder={m["contact.email_placeholder"]()}
                     />
-                    <InputGroupAddon align="inline-start">
+                    <InputGroupAddon align="inline-start" aria-hidden>
                       <HugeiconsIcon icon={MailIcon} />
                     </InputGroupAddon>
                   </InputGroup>
@@ -160,7 +160,7 @@ export function Contact() {
                       aria-invalid={isInvalid}
                       className="min-h-32 resize-none"
                     />
-                    <InputGroupAddon align="block-start">
+                    <InputGroupAddon align="block-start" aria-hidden>
                       <HugeiconsIcon icon={Chatting01Icon} />
                       <InputGroupText className="text-base font-normal">
                         {m["contact.message_placeholder"]()}
